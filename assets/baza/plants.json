@@ -1,0 +1,4052 @@
+[
+  {
+    "id": "1",
+    "name": "Aloe Vera",
+    "latin_name": "Aloe barbadensis miller",
+    "category": "Dorivor",
+    "description": "Aloe Vera qalin va shirali barglarga ega bo‘lgan dorivor sukkulent o‘simlikdir. Barglari ichidagi gel teri parvarishi va xalq tabobatida keng qo‘llaniladi. Kam sug‘orishni talab qiladi va quyoshli joylarda yaxshi rivojlanadi.",
+    "thumbnail_image": "assets/images/plant_1.png",
+    "gallery_images": [
+      "assets/images/plant_1.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 6,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "2",
+    "name": "Kaktus",
+    "latin_name": "Cactaceae",
+    "category": "Sukkulent",
+    "description": "Kaktus qurg‘oqchil hududlarga moslashgan sukkulent o‘simlikdir. U suvni poyasida saqlaydi va uzoq vaqt suvsiz yashay oladi. Dekorativ ko‘rinishi va kam parvarish talab qilishi bilan mashhur.",
+    "thumbnail_image": "assets/images/plant_2.png",
+    "gallery_images": [
+      "assets/images/plant_2.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 7,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "3",
+    "name": "Orxideya",
+    "latin_name": "Orchidaceae",
+    "category": "Gulli",
+    "description": "Orxideya nafis gullari bilan mashhur tropik o‘simlikdir. Yuqori namlik va yorug‘ muhitni yoqtiradi. To‘g‘ri parvarish qilinganda uzoq muddat gullab turadi.",
+    "thumbnail_image": "assets/images/plant_3.png",
+    "gallery_images": [
+      "assets/images/plant_3.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 8,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "4",
+    "name": "Rayhon",
+    "latin_name": "Ocimum basilicum",
+    "category": "Dorivor",
+    "description": "Rayhon O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dorivor turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_4.png",
+    "gallery_images": [
+      "assets/images/plant_4.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 9,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "5",
+    "name": "Yalpiz",
+    "latin_name": "Mentha",
+    "category": "Dorivor",
+    "description": "Yalpiz O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dorivor turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_5.png",
+    "gallery_images": [
+      "assets/images/plant_5.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 10,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "6",
+    "name": "Atirgul",
+    "latin_name": "Rosa",
+    "category": "Gulli",
+    "description": "Atirgul O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U gulli turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_6.png",
+    "gallery_images": [
+      "assets/images/plant_6.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 11,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "7",
+    "name": "Lola",
+    "latin_name": "Tulipa",
+    "category": "Gulli",
+    "description": "Lola O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U gulli turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_7.png",
+    "gallery_images": [
+      "assets/images/plant_7.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 5,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "8",
+    "name": "Nargiz",
+    "latin_name": "Narcissus",
+    "category": "Gulli",
+    "description": "Nargiz O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U gulli turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_8.png",
+    "gallery_images": [
+      "assets/images/plant_8.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 6,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "9",
+    "name": "Xrizantema",
+    "latin_name": "Chrysanthemum",
+    "category": "Gulli",
+    "description": "Xrizantema O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U gulli turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_9.png",
+    "gallery_images": [
+      "assets/images/plant_9.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 7,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "10",
+    "name": "Geran",
+    "latin_name": "Pelargonium",
+    "category": "Gulli",
+    "description": "Geran O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U gulli turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_10.png",
+    "gallery_images": [
+      "assets/images/plant_10.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 8,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "11",
+    "name": "Fikus",
+    "latin_name": "Ficus benjamina",
+    "category": "Xonaki",
+    "description": "Fikus O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U xonaki turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_11.png",
+    "gallery_images": [
+      "assets/images/plant_11.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 9,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "12",
+    "name": "Dratsena",
+    "latin_name": "Dracaena",
+    "category": "Xonaki",
+    "description": "Dratsena O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U xonaki turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_12.png",
+    "gallery_images": [
+      "assets/images/plant_12.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 10,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "13",
+    "name": "Sanseveriya",
+    "latin_name": "Dracaena trifasciata",
+    "category": "Xonaki",
+    "description": "Sanseveriya O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U xonaki turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_13.png",
+    "gallery_images": [
+      "assets/images/plant_13.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 11,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "14",
+    "name": "Xlorofitum",
+    "latin_name": "Chlorophytum comosum",
+    "category": "Xonaki",
+    "description": "Xlorofitum O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U xonaki turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_14.png",
+    "gallery_images": [
+      "assets/images/plant_14.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 5,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "15",
+    "name": "Monstera",
+    "latin_name": "Monstera deliciosa",
+    "category": "Xonaki",
+    "description": "Monstera O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U xonaki turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_15.png",
+    "gallery_images": [
+      "assets/images/plant_15.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 6,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "16",
+    "name": "Pothos",
+    "latin_name": "Epipremnum aureum",
+    "category": "Xonaki",
+    "description": "Pothos O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U xonaki turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_16.png",
+    "gallery_images": [
+      "assets/images/plant_16.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 7,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "17",
+    "name": "Lavanda",
+    "latin_name": "Lavandula",
+    "category": "Dorivor",
+    "description": "Lavanda O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dorivor turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_17.png",
+    "gallery_images": [
+      "assets/images/plant_17.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 8,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "18",
+    "name": "Rozmarin",
+    "latin_name": "Rosmarinus officinalis",
+    "category": "Dorivor",
+    "description": "Rozmarin O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dorivor turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_18.png",
+    "gallery_images": [
+      "assets/images/plant_18.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 9,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "19",
+    "name": "Jasmin",
+    "latin_name": "Jasminum",
+    "category": "Gulli",
+    "description": "Jasmin O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U gulli turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_19.png",
+    "gallery_images": [
+      "assets/images/plant_19.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 10,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "20",
+    "name": "Begoniya",
+    "latin_name": "Begonia",
+    "category": "Gulli",
+    "description": "Begoniya O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U gulli turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_20.png",
+    "gallery_images": [
+      "assets/images/plant_20.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 11,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "21",
+    "name": "Petuniya",
+    "latin_name": "Petunia",
+    "category": "Gulli",
+    "description": "Petuniya O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U gulli turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_21.png",
+    "gallery_images": [
+      "assets/images/plant_21.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 5,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "22",
+    "name": "Kalendula",
+    "latin_name": "Calendula officinalis",
+    "category": "Dorivor",
+    "description": "Kalendula O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dorivor turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_22.png",
+    "gallery_images": [
+      "assets/images/plant_22.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 6,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "23",
+    "name": "Moychechak",
+    "latin_name": "Matricaria chamomilla",
+    "category": "Dorivor",
+    "description": "Moychechak O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dorivor turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_23.png",
+    "gallery_images": [
+      "assets/images/plant_23.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 7,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "24",
+    "name": "Limon daraxti",
+    "latin_name": "Citrus limon",
+    "category": "Mevali",
+    "description": "Limon daraxti O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_24.png",
+    "gallery_images": [
+      "assets/images/plant_24.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 8,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "25",
+    "name": "Mandarin",
+    "latin_name": "Citrus reticulata",
+    "category": "Mevali",
+    "description": "Mandarin O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_25.png",
+    "gallery_images": [
+      "assets/images/plant_25.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 9,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "26",
+    "name": "Anor",
+    "latin_name": "Punica granatum",
+    "category": "Mevali",
+    "description": "Anor O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_26.png",
+    "gallery_images": [
+      "assets/images/plant_26.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 10,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "27",
+    "name": "Anjir",
+    "latin_name": "Ficus carica",
+    "category": "Mevali",
+    "description": "Anjir O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_27.png",
+    "gallery_images": [
+      "assets/images/plant_27.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 11,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "28",
+    "name": "Tut",
+    "latin_name": "Morus",
+    "category": "Mevali",
+    "description": "Tut O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_28.png",
+    "gallery_images": [
+      "assets/images/plant_28.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 5,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "29",
+    "name": "Olma",
+    "latin_name": "Malus domestica",
+    "category": "Mevali",
+    "description": "Olma O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_29.png",
+    "gallery_images": [
+      "assets/images/plant_29.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 6,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "30",
+    "name": "Nok",
+    "latin_name": "Pyrus",
+    "category": "Mevali",
+    "description": "Nok O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_30.png",
+    "gallery_images": [
+      "assets/images/plant_30.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 7,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "31",
+    "name": "O'rik",
+    "latin_name": "Prunus armeniaca",
+    "category": "Mevali",
+    "description": "O'rik O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_31.png",
+    "gallery_images": [
+      "assets/images/plant_31.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 8,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "32",
+    "name": "Shaftoli",
+    "latin_name": "Prunus persica",
+    "category": "Mevali",
+    "description": "Shaftoli O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_32.png",
+    "gallery_images": [
+      "assets/images/plant_32.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 9,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "33",
+    "name": "Gilos",
+    "latin_name": "Prunus avium",
+    "category": "Mevali",
+    "description": "Gilos O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_33.png",
+    "gallery_images": [
+      "assets/images/plant_33.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 10,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "34",
+    "name": "Olcha",
+    "latin_name": "Prunus cerasus",
+    "category": "Mevali",
+    "description": "Olcha O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_34.png",
+    "gallery_images": [
+      "assets/images/plant_34.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 11,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "35",
+    "name": "Uzum",
+    "latin_name": "Vitis vinifera",
+    "category": "Mevali",
+    "description": "Uzum O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_35.png",
+    "gallery_images": [
+      "assets/images/plant_35.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 5,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "36",
+    "name": "Qulupnay",
+    "latin_name": "Fragaria × ananassa",
+    "category": "Mevali",
+    "description": "Qulupnay O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U mevali turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_36.png",
+    "gallery_images": [
+      "assets/images/plant_36.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 6,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "37",
+    "name": "Pomidor",
+    "latin_name": "Solanum lycopersicum",
+    "category": "Sabzavot",
+    "description": "Pomidor O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U sabzavot turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_37.png",
+    "gallery_images": [
+      "assets/images/plant_37.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 7,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "38",
+    "name": "Bodring",
+    "latin_name": "Cucumis sativus",
+    "category": "Sabzavot",
+    "description": "Bodring O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U sabzavot turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_38.png",
+    "gallery_images": [
+      "assets/images/plant_38.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 8,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "39",
+    "name": "Qalampir",
+    "latin_name": "Capsicum annuum",
+    "category": "Sabzavot",
+    "description": "Qalampir O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U sabzavot turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_39.png",
+    "gallery_images": [
+      "assets/images/plant_39.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 9,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "40",
+    "name": "Baqlajon",
+    "latin_name": "Solanum melongena",
+    "category": "Sabzavot",
+    "description": "Baqlajon O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U sabzavot turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_40.png",
+    "gallery_images": [
+      "assets/images/plant_40.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 10,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "41",
+    "name": "Karam",
+    "latin_name": "Brassica oleracea",
+    "category": "Sabzavot",
+    "description": "Karam O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U sabzavot turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_41.png",
+    "gallery_images": [
+      "assets/images/plant_41.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 11,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "42",
+    "name": "Piyoz",
+    "latin_name": "Allium cepa",
+    "category": "Sabzavot",
+    "description": "Piyoz O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U sabzavot turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_42.png",
+    "gallery_images": [
+      "assets/images/plant_42.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 5,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "43",
+    "name": "Sarimsoq",
+    "latin_name": "Allium sativum",
+    "category": "Sabzavot",
+    "description": "Sarimsoq O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U sabzavot turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_43.png",
+    "gallery_images": [
+      "assets/images/plant_43.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 6,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "44",
+    "name": "Shivit",
+    "latin_name": "Anethum graveolens",
+    "category": "Ko'kat",
+    "description": "Shivit O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U ko'kat turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_44.png",
+    "gallery_images": [
+      "assets/images/plant_44.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 7,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "45",
+    "name": "Kashnich",
+    "latin_name": "Coriandrum sativum",
+    "category": "Ko'kat",
+    "description": "Kashnich O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U ko'kat turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_45.png",
+    "gallery_images": [
+      "assets/images/plant_45.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 8,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "46",
+    "name": "Petrushka",
+    "latin_name": "Petroselinum crispum",
+    "category": "Ko'kat",
+    "description": "Petrushka O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U ko'kat turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_46.png",
+    "gallery_images": [
+      "assets/images/plant_46.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 9,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "47",
+    "name": "Zanjabil",
+    "latin_name": "Zingiber officinale",
+    "category": "Dorivor",
+    "description": "Zanjabil O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dorivor turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_47.png",
+    "gallery_images": [
+      "assets/images/plant_47.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 10,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 8
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "48",
+    "name": "Ayiqtovon",
+    "latin_name": "Aloe arborescens",
+    "category": "Dorivor",
+    "description": "Ayiqtovon O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dorivor turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_48.png",
+    "gallery_images": [
+      "assets/images/plant_48.png"
+    ],
+    "location": "both",
+    "care": {
+      "watering": {
+        "days": 11,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 5
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "49",
+    "name": "Evkalipt",
+    "latin_name": "Eucalyptus globulus",
+    "category": "Dorivor",
+    "description": "Evkalipt O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dorivor turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_49.png",
+    "gallery_images": [
+      "assets/images/plant_49.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 5,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 6
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  },
+  {
+    "id": "50",
+    "name": "Mimoza",
+    "latin_name": "Mimosa pudica",
+    "category": "Dekorativ",
+    "description": "Mimoza O‘zbekiston hududida yoki xonadonlarda keng yetishtiriladigan o‘simliklardan biridir. U dekorativ turiga mansub bo‘lib, o‘zining foydali xususiyatlari va dekorativ ko‘rinishi bilan qadrlanadi. To‘g‘ri sug‘orish, yetarli yorug‘lik va muntazam parvarish o‘simlikning sog‘lom rivojlanishiga yordam beradi. Ko‘pchilik bog‘bonlar ushbu o‘simlikni oson parvarish qilinishi va amaliy foydasi sababli tanlaydi.",
+    "thumbnail_image": "assets/images/plant_50.png",
+    "gallery_images": [
+      "assets/images/plant_50.png"
+    ],
+    "location": "indoor",
+    "care": {
+      "watering": {
+        "days": 6,
+        "amount": "200ml"
+      },
+      "sunlight": {
+        "type": "partial",
+        "hours": 7
+      },
+      "temperature": {
+        "min": 15,
+        "max": 30,
+        "ideal": 24
+      },
+      "humidity": {
+        "percent": 50
+      },
+      "soil_type": "Universal tuproq",
+      "fertilizer": {
+        "type": "Organic",
+        "frequency": "Oyiga 1 marta",
+        "usage": "1 litr suvga 5 ml"
+      }
+    },
+    "difficulty": "easy",
+    "growth_rate": "medium",
+    "benefits": [
+      "Dekorativ",
+      "Foydali"
+    ],
+    "tips": [
+      "Ortiqcha sug'ormang",
+      "Yorug' joyda saqlang"
+    ],
+    "diseases": [
+      {
+        "name": "Root Rot",
+        "cause": "Ortiqcha sug'orish",
+        "symptoms": [
+          "Barglarning sarg'ayishi"
+        ],
+        "treatment": {
+          "chemical": "Fungitsid",
+          "organic": "Dolchin kukuni"
+        }
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "treatment": {
+          "chemical": "Insektitsid",
+          "organic": "Sovunli suv"
+        }
+      }
+    ],
+    "propagation_methods": [
+      "Cutting"
+    ],
+    "is_toxic_for_pets": false,
+    "is_toxic_for_children": false,
+    "blooming_season": "Spring",
+    "flower_color": "Mixed",
+    "is_favorite": false,
+    "reminders": {
+      "watering_days": 7,
+      "fertilizer_days": 30,
+      "pruning_days": 90
+    }
+  }
+]

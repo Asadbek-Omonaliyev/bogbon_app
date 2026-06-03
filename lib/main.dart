@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 import 'package:workmanager/workmanager.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -30,20 +31,20 @@ void callbackDispatcher() {
 }
 
 void main() async {
-  // Flutter bindinglarni ishga tushirish
+
   WidgetsFlutterBinding.ensureInitialized();
   
   try {
-    // 1. Lokal bazani yuklash (Hive)
+
     await DatabaseService.init();
     
-    // 2. Bildirishnomalarni yuklash
+
     await NotificationService.init();
-    
-    // 3. Til sozlamalari
+
+
     await initializeDateFormatting('uz', null);
 
-    // 4. Workmanager-ni ishga tushirish
+
     await Workmanager().initialize(
       callbackDispatcher,
       isInDebugMode: false,
@@ -86,13 +87,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeProvider>(
-      builder: (context, themeProvider, child) {
-        return MaterialApp(
-          navigatorKey: navigatorKey,
-          debugShowCheckedModeBanner: false,
-          theme: themeProvider.currentTheme,
-          home: const HomePage(),
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return Consumer<ThemeProvider>(
+          builder: (context, themeProvider, child) {
+            return MaterialApp(
+              navigatorKey: navigatorKey,
+              debugShowCheckedModeBanner: false,
+              theme: themeProvider.currentTheme,
+              home: const HomePage(),
+            );
+          },
         );
       },
     );

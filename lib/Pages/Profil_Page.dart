@@ -102,7 +102,7 @@ class _ProfilPageState extends State<ProfilPage> {
                     // 1. User Header Section
                     SliverToBoxAdapter(
                       child: Container(
-                        padding: const EdgeInsets.fromLTRB(20, 60, 20, 30),
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             begin: Alignment.topLeft,

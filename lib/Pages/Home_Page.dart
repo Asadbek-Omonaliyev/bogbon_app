@@ -296,9 +296,12 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          body: IndexedStack(
-            index: navProvider.currentIndex,
-            children: Pages1,
+          body: SafeArea(
+            top: false, // Bottom bar orqasi ko'rinishi uchun top true qoladi
+            child: IndexedStack(
+              index: navProvider.currentIndex,
+              children: Pages1,
+            ),
           ),
           bottomNavigationBar: Padding(
             padding: const EdgeInsets.all(10),

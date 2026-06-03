@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:bogbon/servis/model/PlantModel.dart';
 import 'package:bogbon/servis/provider/FavoritesProvider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -25,42 +26,42 @@ class HomeComponent extends StatelessWidget {
     final shadowColor = isDark ? Colors.black26 : Colors.black.withOpacity(0.05);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 8.h),
       child: GestureDetector(
         onTap: onTap,
         child: Container(
           decoration: BoxDecoration(
             color: cardColor,
-            borderRadius: BorderRadius.circular(24),
+            borderRadius: BorderRadius.circular(24.r),
             border: Border.all(
               color: isDark ? Colors.white.withOpacity(0.08) : Colors.black.withOpacity(0.03),
             ),
             boxShadow: [
               BoxShadow(
                 color: shadowColor,
-                blurRadius: 15,
-                offset: const Offset(0, 8),
+                blurRadius: 15.r,
+                offset: Offset(0, 8.h),
               ),
             ],
           ),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(24),
+            borderRadius: BorderRadius.circular(24.r),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _buildImageSection(isDark),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(16),
+                    padding: EdgeInsets.all(16.w),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         _buildHeader(context, isDark),
-                        const SizedBox(height: 4),
+                        SizedBox(height: 4.h),
                         _buildLatinName(),
-                        const SizedBox(height: 12),
+                        SizedBox(height: 12.h),
                         _buildStatsRow(isDark),
-                        const SizedBox(height: 12),
+                        SizedBox(height: 12.h),
                         _buildBottomRow(isDark),
                       ],
                     ),
@@ -81,8 +82,8 @@ class HomeComponent extends StatelessWidget {
         Hero(
           tag: '${heroPrefix}_plant_${plantModel.id}',
           child: SizedBox(
-            width: 130,
-            height: 160,
+            width: 130.w,
+            height: 160.h,
             child: plantModel.thumbnailImage.isEmpty
                 ? _buildPlaceholder()
                 : plantModel.thumbnailImage.startsWith('assets/')
@@ -99,22 +100,22 @@ class HomeComponent extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 12,
-          left: 12,
+          top: 12.h,
+          left: 12.w,
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(8.r),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
                 decoration: BoxDecoration(
                   color: difficultyColor.withOpacity(isDark ? 0.4 : 0.7),
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                   border: Border.all(color: Colors.white.withOpacity(0.3)),
                 ),
                 child: Text(
                   _getDifficultyText(plantModel.difficulty),
-                  style: const TextStyle(color: Colors.white, fontSize: 9, fontWeight: FontWeight.bold),
+                  style: TextStyle(color: Colors.white, fontSize: 9.sp, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -134,7 +135,7 @@ class HomeComponent extends StatelessWidget {
             Expanded(
               child: Text(
                 plantModel.name,
-                style: GoogleFonts.poppins(fontSize: 18, fontWeight: FontWeight.bold, color: isDark ? Colors.white : Colors.black87),
+                style: GoogleFonts.poppins(fontSize: 18.sp, fontWeight: FontWeight.bold, color: isDark ? Colors.white : Colors.black87),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -156,7 +157,7 @@ class HomeComponent extends StatelessWidget {
   Widget _buildLatinName() {
     return Text(
       plantModel.latinName.isEmpty ? "Noma'lum tur" : plantModel.latinName,
-      style: GoogleFonts.poppins(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.green.shade600),
+      style: GoogleFonts.poppins(fontSize: 12.sp, fontStyle: FontStyle.italic, color: Colors.green.shade600),
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
     );
@@ -165,8 +166,8 @@ class HomeComponent extends StatelessWidget {
   Widget _buildStatsRow(bool isDark) {
     final textColor = isDark ? Colors.white60 : Colors.black54;
     return Wrap(
-      spacing: 12,
-      runSpacing: 8,
+      spacing: 12.w,
+      runSpacing: 8.h,
       children: [
         _buildSmallStat(Icons.wb_sunny_outlined, _getSunlightShort(plantModel.care.sunlight.type), textColor),
         _buildSmallStat(Icons.water_drop_outlined, "${plantModel.care.watering.days}k", textColor),
@@ -179,9 +180,9 @@ class HomeComponent extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(icon, size: 14, color: color),
-        const SizedBox(width: 4),
-        Text(text, style: GoogleFonts.poppins(fontSize: 10, color: color, fontWeight: FontWeight.w500)),
+        Icon(icon, size: 14.sp, color: color),
+        SizedBox(width: 4.w),
+        Text(text, style: GoogleFonts.poppins(fontSize: 10.sp, color: color, fontWeight: FontWeight.w500)),
       ],
     );
   }
@@ -190,19 +191,19 @@ class HomeComponent extends StatelessWidget {
     return Wrap(
       alignment: WrapAlignment.spaceBetween,
       crossAxisAlignment: WrapCrossAlignment.center,
-      spacing: 8,
-      runSpacing: 8,
+      spacing: 8.w,
+      runSpacing: 8.h,
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
           decoration: BoxDecoration(
             color: Colors.green.withOpacity(0.1),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
           ),
           child: Text(
             plantModel.category,
             style: GoogleFonts.poppins(
-              fontSize: 10,
+              fontSize: 10.sp,
               color: Colors.green.shade700,
               fontWeight: FontWeight.bold,
             ),
@@ -212,15 +213,15 @@ class HomeComponent extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              width: 8,
-              height: 8,
+              width: 8.w,
+              height: 8.h,
               decoration: const BoxDecoration(color: Colors.green, shape: BoxShape.circle),
             ),
-            const SizedBox(width: 6),
+            SizedBox(width: 6.w),
             Text(
               "Sog'lom",
               style: GoogleFonts.poppins(
-                fontSize: 10,
+                fontSize: 10.sp,
                 color: isDark ? Colors.white38 : Colors.black38,
               ),
             ),

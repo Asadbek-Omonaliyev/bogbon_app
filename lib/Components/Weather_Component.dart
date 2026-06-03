@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
@@ -103,20 +104,20 @@ class WeatherComponentState extends State<WeatherComponent> {
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
-      height: 180,
+      height: 180.h,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(25.r),
         border: Border.all(color: isDark ? Colors.white.withOpacity(0.2) : Colors.black.withOpacity(0.1)),
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(25.r),
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
           child: Container(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.all(20.w),
             decoration: BoxDecoration(
               color: isDark ? Colors.white.withOpacity(0.1) : Colors.black.withOpacity(0.05),
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.circular(25.r),
             ),
             child: isLoading 
               ? Center(child: CircularProgressIndicator(color: isDark ? Colors.white : Colors.green))
@@ -134,7 +135,7 @@ class WeatherComponentState extends State<WeatherComponent> {
                             city,
                             style: GoogleFonts.poppins(
                               color: isDark ? Colors.white : Colors.black87,
-                              fontSize: 18,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.w500,
                             ),
                             maxLines: 1,
@@ -144,17 +145,17 @@ class WeatherComponentState extends State<WeatherComponent> {
                             date,
                             style: GoogleFonts.poppins(
                               color: isDark ? Colors.white70 : Colors.black54,
-                              fontSize: 12,
+                              fontSize: 12.sp,
                             ),
                           ),
                         ],
                       ),
                     ),
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10.w),
                     Icon(
                       weatherIcon,
                       color: isDark ? Colors.orangeAccent : Colors.orange,
-                      size: 50,
+                      size: 50.sp,
                     ),
                   ],
                 ),
@@ -165,11 +166,11 @@ class WeatherComponentState extends State<WeatherComponent> {
                       temp,
                       style: GoogleFonts.poppins(
                         color: isDark ? Colors.white : Colors.black87,
-                        fontSize: 45,
+                        fontSize: 45.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10.w),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
@@ -178,30 +179,30 @@ class WeatherComponentState extends State<WeatherComponent> {
                             description,
                             style: GoogleFonts.poppins(
                               color: isDark ? Colors.white : Colors.black87,
-                              fontSize: 14,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w500,
                             ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                           ),
-                          const SizedBox(height: 5),
+                          SizedBox(height: 5.h),
                           FittedBox(
                             fit: BoxFit.scaleDown,
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                const Icon(Icons.water_drop, color: Colors.blueAccent, size: 16),
-                                const SizedBox(width: 5),
+                                Icon(Icons.water_drop, color: Colors.blueAccent, size: 16.sp),
+                                SizedBox(width: 5.w),
                                 Text(
                                   humidity,
-                                  style: GoogleFonts.poppins(color: isDark ? Colors.white70 : Colors.black54, fontSize: 12),
+                                  style: GoogleFonts.poppins(color: isDark ? Colors.white70 : Colors.black54, fontSize: 12.sp),
                                 ),
-                                const SizedBox(width: 15),
-                                Icon(Icons.air, color: isDark ? Colors.white70 : Colors.black54, size: 16),
-                                const SizedBox(width: 5),
+                                SizedBox(width: 15.w),
+                                Icon(Icons.air, color: isDark ? Colors.white70 : Colors.black54, size: 16.sp),
+                                SizedBox(width: 5.w),
                                 Text(
                                   windSpeed,
-                                  style: GoogleFonts.poppins(color: isDark ? Colors.white70 : Colors.black54, fontSize: 12),
+                                  style: GoogleFonts.poppins(color: isDark ? Colors.white70 : Colors.black54, fontSize: 12.sp),
                                 ),
                               ],
                             ),

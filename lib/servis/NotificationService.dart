@@ -1,5 +1,9 @@
 import 'package:bogbon/main.dart';
+import 'package:bogbon/servis/DatabaseService.dart';
+import 'package:bogbon/servis/model/PlantModel.dart';
 import 'package:bogbon/servis/provider/CareProvider.dart';
+import 'package:bogbon/servis/provider/PlantProvider.dart';
+import 'package:bogbon/servis/shared_preferences/Shared_preferens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:provider/provider.dart';
@@ -78,17 +82,10 @@ class NotificationService {
               final careProvider = Provider.of<CareProvider>(context, listen: false);
               careProvider.addPostponedPlant(payload); // "ID|NAME" saqlanadi
 
-              // 3 soatdan keyin yana eslatish
-              schedulePlantReminder(
-                id: plantId,
-                plantName: plantName,
-                days: 0,
-                hoursLater: 3,
-              );
               Navigator.pop(context);
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  content: Text("Keyinroq sug'orish belgilandi (-5 XP). 3 soatdan so'ng yana eslatamiz."),
+                  content: Text("Keyinroq bo'limiga qo'shildi."),
                   backgroundColor: Colors.orange,
                 ),
               );
@@ -101,13 +98,58 @@ class NotificationService {
               foregroundColor: Colors.white,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             ),
-            onPressed: () {
+            onPressed: () async {
               final careProvider = Provider.of<CareProvider>(context, listen: false);
-              careProvider.incrementWateringCount();
-              Navigator.pop(context);
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text("Ajoyib! O'simlik sug'orildi"), backgroundColor: Colors.green),
-              );
+              
+              // O'simlikni sug'orilgan deb belgilash
+              final plant = DatabaseService.getPlantById(parts[0]);
+              if (plant != null) {
+                final updatedPlant = PlantModel(
+                  id: plant.id,
+                  name: plant.name,
+                  latinName: plant.latinName,
+                  family: plant.family,
+                  category: plant.category,
+                  origin: plant.origin,
+                  description: plant.description,
+                  thumbnailImage: plant.thumbnailImage,
+                  galleryImages: plant.galleryImages,
+                  location: plant.location,
+                  care: plant.care,
+                  difficulty: plant.difficulty,
+                  growthRate: plant.growthRate,
+                  matureSize: plant.matureSize,
+                  lifespan: plant.lifespan,
+                  seasonalCare: plant.seasonalCare,
+                  benefits: plant.benefits,
+                  tips: plant.tips,
+                  commonProblems: plant.commonProblems,
+                  diseases: plant.diseases,
+                  pests: plant.pests,
+                  propagationMethods: plant.propagationMethods,
+                  companionPlants: plant.companionPlants,
+                  isToxicForPets: plant.isToxicForPets,
+                  isToxicForChildren: plant.isToxicForChildren,
+                  flowering: plant.flowering,
+                  smartNotifications: plant.smartNotifications,
+                  aiContext: plant.aiContext,
+                  isFavorite: plant.isFavorite,
+                  lastWateredAt: DateTime.now(), // Yangilash
+                  createdAt: plant.createdAt,
+                  isUserCreated: plant.isUserCreated,
+                );
+                await Provider.of<PlantProvider>(context, listen: false).addPlant(updatedPlant);
+              }
+
+              await careProvider.incrementWateringCount();
+              await careProvider.removePostponedPlant(payload);
+              
+              if (context.mounted) {
+                Navigator.pop(context);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text("Ajoyib! O'simlik sug'orildi"), backgroundColor: Colors.green),
+                );
+              }
             },
             child: const Text("Sug'ordim"),
           ),
@@ -123,22 +165,26 @@ class NotificationService {
     String? payload,
   }) async {
     debugPrint("NotificationService: Bildirishnoma chiqarilmoqda - $title");
-    const AndroidNotificationDetails androidDetails =
-    AndroidNotificationDetails(
-      'plant_reminders_v4',
+    
+    final bool isGlobalOn = await SharedPreferens.getGlobalNotifications();
+    
+    final AndroidNotificationDetails androidDetails = AndroidNotificationDetails(
+      isGlobalOn ? 'plant_audible' : 'plant_silent',
       'O\'simliklar parvarishi',
-      channelDescription: 'O\'simliklarni sug\'orish haqida eslatmalar',
-      importance: Importance.max,
-      priority: Priority.high,
+      channelDescription: 'O\'simliklar haqida eslatmalar',
+      importance: isGlobalOn ? Importance.max : Importance.defaultImportance,
+      priority: isGlobalOn ? Priority.high : Priority.defaultPriority,
+      playSound: isGlobalOn,
+      enableVibration: isGlobalOn,
       showWhen: true,
-      color: Color(0xFF2D7D32),
+      color: const Color(0xFF2D7D32),
     );
 
     await _notificationsPlugin.show(
       id,
       title,
       body,
-      const NotificationDetails(android: androidDetails),
+      NotificationDetails(android: androidDetails),
       payload: payload,
     );
   }
@@ -148,12 +194,23 @@ class NotificationService {
     required String plantName,
     required int days,
     int hoursLater = 0,
+    DateTime? lastWateredAt,
   }) async {
+    final bool isGlobalOn = await SharedPreferens.getGlobalNotifications();
     final bool isTest = (id == 1 || id == 2) && hoursLater == 0;
 
     tz.TZDateTime scheduledDate;
     if (hoursLater > 0) {
       scheduledDate = tz.TZDateTime.now(tz.local).add(Duration(hours: hoursLater));
+    } else if (lastWateredAt != null) {
+      // Oxirgi sug'orilgan kundan boshlab hisoblash
+      final nextDate = lastWateredAt.add(Duration(days: days));
+      scheduledDate = tz.TZDateTime.from(nextDate, tz.local);
+      
+      // Agar hisoblangan sana o'tib ketgan bo'lsa, 10 soniyadan keyin chiqaramiz
+      if (scheduledDate.isBefore(tz.TZDateTime.now(tz.local))) {
+         scheduledDate = tz.TZDateTime.now(tz.local).add(const Duration(seconds: 10));
+      }
     } else {
       scheduledDate = tz.TZDateTime.now(tz.local).add(
         isTest ? const Duration(seconds: 10) : Duration(days: days),
@@ -161,11 +218,13 @@ class NotificationService {
     }
 
     final AndroidNotificationDetails androidDetails = AndroidNotificationDetails(
-      'plant_reminders_v4',
+      isGlobalOn ? 'plant_audible' : 'plant_silent',
       'O\'simliklar parvarishi',
-      channelDescription: 'O\'simliklarni sug\'orish haqida eslatmalar',
-      importance: Importance.max,
-      priority: Priority.high,
+      channelDescription: 'O\'simliklar haqida eslatmalar',
+      importance: isGlobalOn ? Importance.max : Importance.defaultImportance,
+      priority: isGlobalOn ? Priority.high : Priority.defaultPriority,
+      playSound: isGlobalOn,
+      enableVibration: isGlobalOn,
       color: const Color(0xFF2D7D32),
       styleInformation: BigTextStyleInformation(
         "Bugun $plantName o'simligingiz uchun sug'orish vaqti keldi. Uni parvarish qilishni unutmang! 💧",

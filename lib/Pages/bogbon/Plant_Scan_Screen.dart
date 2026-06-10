@@ -104,51 +104,67 @@ class _PlantScanScreenState extends State<PlantScanScreen> {
   }
 
   PlantModel _convertToPlantModel(AIPlantModel result, String imagePath, {bool isFavorite = false}) {
+    final wateringDays = int.tryParse(result.care.wateringDays) ?? 7;
     return PlantModel(
       id: const Uuid().v4(),
       name: result.name,
       latinName: result.latinName,
+      family: "",
       category: result.category,
+      origin: [],
       description: result.description,
       thumbnailImage: imagePath,
       galleryImages: [],
       location: PlantLocation.indoor,
+      difficulty: DifficultyLevel.medium,
+      growthRate: GrowthRate.medium,
+      matureSize: const MatureSizeModel(heightCm: 0, widthCm: 0),
+      lifespan: "",
       care: CareModel(
         watering: WateringModel(
-          days: int.tryParse(result.care.wateringDays) ?? 7,
-          amount: "O'rtacha",
+          days: wateringDays,
+          summerDays: wateringDays,
+          winterDays: wateringDays * 2,
+          amountMl: 200,
+          method: "Tuproq qurigandan keyin sug‘orish",
+          overwateringRisk: "medium",
         ),
         sunlight: SunlightModel(
           type: _parseSunlight(result.care.sunlight),
           hours: 4,
+          luxMin: 0,
+          luxMax: 0,
         ),
-        temperature: TemperatureModel(
+        temperature: const TemperatureModel(
           min: 15,
-          max: 30,
+          max: 35,
           ideal: 22,
         ),
-        humidity: const HumidityModel(percent: 50),
-        soilType: "Universal",
-        fertilizer: result.care.fertilizer ?? const FertilizerModel(type: "Universal", frequency: "Har oy", usage: "O'rtacha"),
-        repotting: const RepottingModel(everyMonths: 12, season: "Bahor"),
+        humidity: const HumidityModel(min: 30, ideal: 50, max: 70),
+        soil: const SoilModel(type: "Universal", phMin: 6.0, phMax: 7.0, drainage: "good"),
+        fertilizer: result.care.fertilizer ?? const FertilizerModel(type: "Universal", npk: "10-10-10", frequencyDays: 30),
       ),
-      difficulty: DifficultyLevel.medium,
-      growthRate: GrowthRate.medium,
+      seasonalCare: const SeasonalCareModel(spring: [], summer: [], autumn: [], winter: []),
       benefits: result.benefits,
       tips: result.tips,
+      commonProblems: [],
       diseases: result.diseases,
       pests: [],
       propagationMethods: result.propagationMethods,
+      companionPlants: [],
       isToxicForPets: false,
       isToxicForChildren: false,
-      bloomingSeason: "",
-      flowerColor: "",
-      isFavorite: isFavorite,
-      reminders: ReminderModel(
-        wateringDays: int.tryParse(result.care.wateringDays) ?? 7,
+      flowering: const FloweringModel(season: "", flowerColor: "", floweringAgeYears: 0),
+      smartNotifications: SmartNotificationsModel(
+        wateringDays: wateringDays,
         fertilizerDays: 30,
+        repottingDays: 365,
         pruningDays: 90,
+        temperatureAlerts: const TemperatureAlertsModel(low: 10, high: 35),
+        humidityAlerts: const HumidityAlertsModel(low: 30, high: 70),
       ),
+      aiContext: const AiContextModel(plantType: "", wateringSensitivity: "", droughtTolerance: "", diseaseRisk: "", petFriendly: false),
+      isFavorite: isFavorite,
       lastWateredAt: DateTime.now(),
       createdAt: DateTime.now(),
       isUserCreated: true,
@@ -407,12 +423,16 @@ class _PlantScanScreenState extends State<PlantScanScreen> {
           children: [
             Icon(icon, size: 18, color: isActive ? Colors.white : Colors.grey),
             const SizedBox(width: 8),
-            Text(
-              label,
-              style: GoogleFonts.poppins(
-                fontSize: 12,
-                fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
-                color: isActive ? Colors.white : Colors.grey,
+            Flexible(
+              child: Text(
+                label,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
+                  color: isActive ? Colors.white : Colors.grey,
+                ),
               ),
             ),
           ],
@@ -612,11 +632,21 @@ class _PlantScanScreenState extends State<PlantScanScreen> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Icon(icon, size: 16, color: Colors.green.shade700),
           const SizedBox(width: 10),
-          Text("$label: ", style: const TextStyle(fontWeight: FontWeight.w500)),
-          Text(value),
+          Expanded(
+            child: Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(text: "$label: ", style: const TextStyle(fontWeight: FontWeight.w500)),
+                  TextSpan(text: value),
+                ],
+              ),
+              style: GoogleFonts.poppins(fontSize: 13),
+            ),
+          ),
         ],
       ),
     );

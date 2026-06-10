@@ -1,5 +1,5 @@
-import 'package:bogbon/Pages/Home_Page.dart';
-import 'package:bogbon/Pages/Plant_Details_Page.dart';
+import 'package:bogbon/Pages/bogbon/Home_Page.dart';
+import 'package:bogbon/Pages/bogbon/Plant_Details_Page.dart';
 import 'package:bogbon/Components/Home_Component.dart';
 import 'package:bogbon/Components/Weather_Component.dart';
 import 'package:bogbon/servis/provider/PlantProvider.dart';

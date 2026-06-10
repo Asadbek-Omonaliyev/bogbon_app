@@ -1,12 +1,12 @@
 import 'dart:io';
 import 'dart:ui';
 
-import 'package:bogbon/Pages/Plant_Scan_Screen.dart';
-import 'package:bogbon/Pages/Profil_Page.dart';
-import 'package:bogbon/Pages/Eslatma_Page.dart';
-import 'package:bogbon/Pages/Home_Page2.dart';
-import 'package:bogbon/Pages/Katalog.dart';
-import 'package:bogbon/Pages/Saqlangan_Page.dart';
+import 'package:bogbon/Pages/bogbon/Plant_Scan_Screen.dart';
+import 'package:bogbon/Pages/bogbon/Profil_Page.dart';
+import 'package:bogbon/Pages/bogbon/Eslatma_Page.dart';
+import 'package:bogbon/Pages/bogbon/Home_Page2.dart';
+import 'package:bogbon/Pages/bogbon/Katalog.dart';
+import 'package:bogbon/Pages/bogbon/Saqlangan_Page.dart';
 import 'package:bogbon/servis/DatabaseService.dart';
 import 'package:bogbon/servis/WeatherService.dart';
 import 'package:bogbon/servis/model/PlantModel.dart';
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                       contentPadding: EdgeInsets.zero,
                       leading: CircleAvatar(
                         backgroundColor: Colors.blue.withOpacity(0.1),
-                        child: const Icon(Icons.eco, color: Colors.blue, size: 20),
+                        child: const Icon(Icons.water_drop, color: Colors.blue, size: 20),
                       ),
                       title: Text(name, style: GoogleFonts.poppins(fontSize: 14)),
                       trailing: ElevatedButton(
@@ -107,7 +107,9 @@ class _HomePageState extends State<HomePage> {
                               id: plant.id,
                               name: plant.name,
                               latinName: plant.latinName,
+                              family: plant.family,
                               category: plant.category,
+                              origin: plant.origin,
                               description: plant.description,
                               thumbnailImage: plant.thumbnailImage,
                               galleryImages: plant.galleryImages,
@@ -115,17 +117,22 @@ class _HomePageState extends State<HomePage> {
                               care: plant.care,
                               difficulty: plant.difficulty,
                               growthRate: plant.growthRate,
+                              matureSize: plant.matureSize,
+                              lifespan: plant.lifespan,
+                              seasonalCare: plant.seasonalCare,
                               benefits: plant.benefits,
                               tips: plant.tips,
+                              commonProblems: plant.commonProblems,
                               diseases: plant.diseases,
                               pests: plant.pests,
                               propagationMethods: plant.propagationMethods,
+                              companionPlants: plant.companionPlants,
                               isToxicForPets: plant.isToxicForPets,
                               isToxicForChildren: plant.isToxicForChildren,
-                              bloomingSeason: plant.bloomingSeason,
-                              flowerColor: plant.flowerColor,
+                              flowering: plant.flowering,
+                              smartNotifications: plant.smartNotifications,
+                              aiContext: plant.aiContext,
                               isFavorite: plant.isFavorite,
-                              reminders: plant.reminders,
                               lastWateredAt: DateTime.now(),
                               createdAt: plant.createdAt,
                               isUserCreated: plant.isUserCreated,
@@ -297,7 +304,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           body: SafeArea(
-            top: false, // Bottom bar orqasi ko'rinishi uchun top true qoladi
+            bottom: false,
             child: IndexedStack(
               index: navProvider.currentIndex,
               children: Pages1,

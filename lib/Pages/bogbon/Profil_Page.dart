@@ -1,11 +1,14 @@
 import 'dart:io';
 import 'dart:ui';
-import 'package:bogbon/Pages/Add_Plant_Page.dart';
-import 'package:bogbon/Pages/Plant_Details_Page.dart';
-import 'package:bogbon/Pages/Saqlangan_Page.dart';
+import 'package:bogbon/Pages/bogbon/Add_Plant_Page.dart';
+import 'package:bogbon/Pages/bogbon/Plant_Details_Page.dart';
+import 'package:bogbon/Pages/bogbon/Saqlangan_Page.dart';
+import 'package:bogbon/Pages/shop/Shop_Page.dart';
 import 'package:bogbon/servis/model/PlantModel.dart';
 import 'package:bogbon/servis/provider/FavoritesProvider.dart';
-import 'package:bogbon/Pages/Plant_Scan_Screen.dart';
+import 'package:bogbon/Pages/bogbon/Plant_Scan_Screen.dart';
+import 'package:bogbon/Pages/bogbon/Watering_Stats_Page.dart';
+import 'package:bogbon/servis/provider/NotificationProvider.dart';
 import 'package:bogbon/servis/provider/UserProvider.dart';
 import 'package:bogbon/servis/provider/CareProvider.dart';
 import 'package:bogbon/servis/FileService.dart';
@@ -15,8 +18,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:bogbon/servis/provider/ThemeProvider.dart';
 
-import '../servis/DatabaseService.dart';
-import '../servis/provider/PlantProvider.dart';
+import 'package:bogbon/servis/DatabaseService.dart';
+import 'package:bogbon/servis/provider/PlantProvider.dart';
 
 class ProfilPage extends StatefulWidget {
   const ProfilPage({super.key});
@@ -36,6 +39,9 @@ class _ProfilPageState extends State<ProfilPage> {
 
   Future<void> _loadInitialData() async {
     await Provider.of<UserProvider>(context, listen: false).loadUserData();
+    if (mounted) {
+      await Provider.of<CareProvider>(context, listen: false).syncOverduePlants();
+    }
     if (mounted) {
       setState(() {
         isLoading = false;
@@ -99,7 +105,7 @@ class _ProfilPageState extends State<ProfilPage> {
                 return CustomScrollView(
                   physics: const BouncingScrollPhysics(),
                   slivers: [
-                    // 1. User Header Section
+
                     SliverToBoxAdapter(
                       child: Container(
                         padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
@@ -179,7 +185,7 @@ class _ProfilPageState extends State<ProfilPage> {
                       ),
                     ),
 
-                    // 2. Statistics Section
+
                     SliverToBoxAdapter(
                       child: Padding(
                         padding: const EdgeInsets.all(20),
@@ -216,10 +222,10 @@ class _ProfilPageState extends State<ProfilPage> {
                                 ),
                                 _buildStatCard(
                                   careProvider.postponedPlants.length.toString(),
-                                  "Sug'orilmagan",
-                                  Icons.history,
+                                  "Keyinroq",
+                                  Icons.history_outlined,
                                   isDark,
-                                  () => _showPostponedDialog(context, careProvider),
+                                  null,
                                 ),
                               ],
                             );
@@ -228,7 +234,7 @@ class _ProfilPageState extends State<ProfilPage> {
                       ),
                     ),
 
-                    // 3. My Plants Section (Horizontal)
+
                     SliverToBoxAdapter(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -344,7 +350,7 @@ class _ProfilPageState extends State<ProfilPage> {
                       ),
                     ),
 
-                    // 4. AI Section
+
                     SliverToBoxAdapter(
                       child: Padding(
                         padding: const EdgeInsets.all(20),
@@ -393,10 +399,31 @@ class _ProfilPageState extends State<ProfilPage> {
                               isDark,
                               context,
                             ),
+                            // _buildSettingsTile(
+                            //   Icons.shopping_bag_outlined,
+                            //   "Do'kon",
+                            //   null,
+                            //   isDark,
+                            //   context,
+                            // ),
                             _buildSettingsTile(
                               Icons.notifications_outlined,
                               "Bildirishnomalar",
                               false,
+                              isDark,
+                              context,
+                            ),
+                            _buildSettingsTile(
+                              Icons.history_outlined,
+                              "Keyinroq",
+                              null,
+                              isDark,
+                              context,
+                            ),
+                            _buildSettingsTile(
+                              Icons.water_drop_outlined,
+                              "Sug'orish jadvali",
+                              null,
                               isDark,
                               context,
                             ),
@@ -470,7 +497,9 @@ class _ProfilPageState extends State<ProfilPage> {
                               id: plant.id,
                               name: plant.name,
                               latinName: plant.latinName,
+                              family: plant.family,
                               category: plant.category,
+                              origin: plant.origin,
                               description: plant.description,
                               thumbnailImage: plant.thumbnailImage,
                               galleryImages: plant.galleryImages,
@@ -478,17 +507,22 @@ class _ProfilPageState extends State<ProfilPage> {
                               care: plant.care,
                               difficulty: plant.difficulty,
                               growthRate: plant.growthRate,
+                              matureSize: plant.matureSize,
+                              lifespan: plant.lifespan,
+                              seasonalCare: plant.seasonalCare,
                               benefits: plant.benefits,
                               tips: plant.tips,
+                              commonProblems: plant.commonProblems,
                               diseases: plant.diseases,
                               pests: plant.pests,
                               propagationMethods: plant.propagationMethods,
+                              companionPlants: plant.companionPlants,
                               isToxicForPets: plant.isToxicForPets,
                               isToxicForChildren: plant.isToxicForChildren,
-                              bloomingSeason: plant.bloomingSeason,
-                              flowerColor: plant.flowerColor,
+                              flowering: plant.flowering,
+                              smartNotifications: plant.smartNotifications,
+                              aiContext: plant.aiContext,
                               isFavorite: plant.isFavorite,
-                              reminders: plant.reminders,
                               lastWateredAt: DateTime.now(), // Yangilash
                               createdAt: plant.createdAt,
                               isUserCreated: plant.isUserCreated,
@@ -724,6 +758,55 @@ class _ProfilPageState extends State<ProfilPage> {
     );
   }
 
+  void _showPrivacyPolicy() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: const Text("Maxfiylik siyosati"),
+        content: const SingleChildScrollView(
+          child: Text(
+            "Bog'bon ilovasi sizning maxfiyligingizni qadrlaydi. \n\n"
+            "1. Ma'lumotlar to'planishi: Ilova sizning ismingiz va o'simliklaringiz haqidagi ma'lumotlarni faqat qurilmangizning o'zida saqlaydi.\n\n"
+            "2. Kamera va Galereya: O'simliklarni aniqlash uchun ruxsat so'raladi. Rasmlar serverga faqat tahlil uchun yuboriladi va saqlanib qolmaydi.\n\n"
+            "3. Joylashuv: Ob-havo ma'lumotlarini olish uchun joylashuvingizdan foydalaniladi.\n\n"
+            "4. Xavfsizlik: Barcha ma'lumotlar qurilmangizda xavfsiz saqlanadi.",
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("Tushunarli"),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showLanguageDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text("Tilni tanlang"),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              title: const Text("O'zbek tili"),
+              leading: const Icon(Icons.check, color: Colors.green),
+              onTap: () => Navigator.pop(context),
+            ),
+            ListTile(
+              title: const Text("English (Tez kunda)"),
+              enabled: false,
+              onTap: () => Navigator.pop(context),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   Widget _buildSettingsTile(
     IconData icon,
     String title,
@@ -740,19 +823,49 @@ class _ProfilPageState extends State<ProfilPage> {
         borderRadius: BorderRadius.circular(15),
       ),
       child: ListTile(
+        onTap: () {
+          if (title == "Til sozlamalari") {
+            _showLanguageDialog();
+          } else if (title == "Maxfiylik") {
+            _showPrivacyPolicy();
+          } else if (title == "Keyinroq") {
+            final careProvider = Provider.of<CareProvider>(context, listen: false);
+            _showPostponedDialog(context, careProvider);
+          } else if (title == "Sug'orish jadvali") {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const WateringStatsPage(),
+              ),
+            );
+          } else if (title == "Do'kon") {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ShopPage(),
+              ),
+            );
+          }
+        },
         leading: Icon(icon, color: isDark ? Colors.white70 : Colors.black54),
         title: Text(title, style: GoogleFonts.poppins(fontSize: 15)),
         trailing: value == null
             ? const Icon(Icons.arrow_forward_ios, size: 14)
-            : Consumer<ThemeProvider>(
-                builder: (context, theme, child) => Switch(
-                  value: title == "Tungi rejim" ? theme.isDark : value,
-                  onChanged: (val) {
-                    if (title == "Tungi rejim") theme.toggleTheme();
-                  },
-                  activeColor: Colors.green,
-                ),
-              ),
+            : title == "Tungi rejim"
+                ? Consumer<ThemeProvider>(
+                    builder: (context, theme, child) => Switch(
+                      value: theme.isDark,
+                      onChanged: (val) => theme.toggleTheme(),
+                      activeColor: Colors.green,
+                    ),
+                  )
+                : Consumer<NotificationProvider>(
+                    builder: (context, notif, child) => Switch(
+                      value: notif.isGlobalOn,
+                      onChanged: (val) => notif.setGlobalNotification(val),
+                      activeColor: Colors.green,
+                    ),
+                  ),
       ),
     );
   }

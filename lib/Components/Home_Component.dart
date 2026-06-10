@@ -261,6 +261,7 @@ class HomeComponent extends StatelessWidget {
       case SunlightType.direct: return "Quyosh";
       case SunlightType.partial: return "Yarim";
       case SunlightType.lowLight: return "Soya";
+      case SunlightType.bright_indirect: return "Yorug'";
     }
   }
 }

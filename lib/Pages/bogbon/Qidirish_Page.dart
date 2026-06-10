@@ -1,5 +1,5 @@
 import 'package:bogbon/Components/Home_Component.dart';
-import 'package:bogbon/Pages/Plant_Details_Page.dart';
+import 'package:bogbon/Pages/bogbon/Plant_Details_Page.dart';
 import 'package:bogbon/servis/DatabaseService.dart';
 import 'package:bogbon/servis/model/PlantModel.dart';
 import 'package:flutter/material.dart';
@@ -17,21 +17,29 @@ class SearchResultsPage extends StatefulWidget {
 class _SearchResultsPageState extends State<SearchResultsPage> {
   List<PlantModel> filteredPlants = [];
   bool isLoading = true;
+  late TextEditingController _searchController;
 
   @override
   void initState() {
     super.initState();
-    _performSearch();
+    _searchController = TextEditingController(text: widget.query);
+    _performSearch(_searchController.text);
   }
 
-  void _performSearch() {
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  void _performSearch(String query) {
     final allPlants = DatabaseService.getAllPlants();
     setState(() {
       filteredPlants = allPlants.where((plant) {
-        final searchLower = widget.query.toLowerCase();
+        final searchLower = query.toLowerCase();
         
         // 1. Toifa bo'yicha filtr (Katalogdan kelganda)
-        if (widget.filterKey != null) {
+        if (widget.filterKey != null && query == widget.query) {
           final key = widget.filterKey!.toLowerCase();
           if (key == "all") return true;
           if (key == "indoor") return plant.location == PlantLocation.indoor || plant.location == PlantLocation.both;
@@ -40,6 +48,7 @@ class _SearchResultsPageState extends State<SearchResultsPage> {
         }
 
         // 2. Oddiy matnli qidiruv
+        if (searchLower.isEmpty) return true;
         if (searchLower == "barcha o‘simliklar" || searchLower == "all") return true;
         
         bool matchesName = plant.name.toLowerCase().contains(searchLower) ||
@@ -64,7 +73,46 @@ class _SearchResultsPageState extends State<SearchResultsPage> {
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         foregroundColor: isDark ? Colors.white : Colors.black87,
         elevation: 0,
-        title: Text("Natijalar: \"${widget.query}\"", style: GoogleFonts.poppins(fontSize: 18)),
+        titleSpacing: 0,
+        title: Container(
+          height: 40,
+          margin: const EdgeInsets.only(right: 20),
+          decoration: BoxDecoration(
+            color: isDark ? Colors.white.withOpacity(0.1) : Colors.black.withOpacity(0.05),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: TextField(
+            controller: _searchController,
+            autofocus: false,
+            style: GoogleFonts.poppins(
+              fontSize: 14,
+              color: isDark ? Colors.white : Colors.black87,
+            ),
+            decoration: InputDecoration(
+              hintText: "O'simlikni qidirish...",
+              hintStyle: GoogleFonts.poppins(color: Colors.grey, fontSize: 14),
+              border: InputBorder.none,
+              prefixIcon: const Icon(Icons.search, size: 20, color: Colors.grey),
+              contentPadding: const EdgeInsets.symmetric(vertical: 10),
+            ),
+            onChanged: (value) {
+              _performSearch(value);
+            },
+          ),
+        ),
+        actions: [
+          if (_searchController.text.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: IconButton(
+                icon: const Icon(Icons.close, size: 20),
+                onPressed: () {
+                  _searchController.clear();
+                  _performSearch("");
+                },
+              ),
+            ),
+        ],
       ),
       body: isLoading
           ? const Center(child: CircularProgressIndicator(color: Colors.green))

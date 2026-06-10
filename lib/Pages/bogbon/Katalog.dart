@@ -1,5 +1,5 @@
 import 'package:bogbon/Components/katalog_component.dart';
-import 'package:bogbon/Pages/Qidirish_Page.dart';
+import 'package:bogbon/Pages/bogbon/Qidirish_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -48,11 +48,18 @@ class DatabaseService {
     _registerSafe(TemperatureModelAdapter());
     _registerSafe(HumidityModelAdapter());
     _registerSafe(FertilizerModelAdapter());
-    _registerSafe(RepottingModelAdapter());
     _registerSafe(DiseaseModelAdapter());
     _registerSafe(PestModelAdapter());
-    _registerSafe(ReminderModelAdapter());
+    _registerSafe(SmartNotificationsModelAdapter());
     _registerSafe(TreatmentModelAdapter());
+    _registerSafe(MatureSizeModelAdapter());
+    _registerSafe(SoilModelAdapter());
+    _registerSafe(SeasonalCareModelAdapter());
+    _registerSafe(CommonProblemModelAdapter());
+    _registerSafe(FloweringModelAdapter());
+    _registerSafe(TemperatureAlertsModelAdapter());
+    _registerSafe(HumidityAlertsModelAdapter());
+    _registerSafe(AiContextModelAdapter());
   }
 
   static Future<void> _openBoxes() async {
@@ -70,10 +77,30 @@ class DatabaseService {
   static Future<void> _checkAndSyncData() async {
     final box = Hive.box<PlantModel>(_plantsBoxName);
     
-    // Agar baza bo'sh bo'lsa yoki eski (kam) ma'lumotlar bo'lsa, yangilaymiz
-    if (box.isEmpty || box.length < 10) {
+    // Ma'lumotlar bazasini yangilash (rasm manzillari va yangi struktura uchun)
+    // Agarda bazadagi ma'lumotlar soni 50 tadan kam bo'lsa yoki rasm manzillari eski bo'lsa, tozalab qayta yuklaymiz
+    bool needsRefresh = box.isEmpty || box.length < 50;
+    
+    if (!needsRefresh && box.isNotEmpty) {
+       // Birinchi elementni tekshiramiz
+       final firstPlant = box.values.first;
+       if (firstPlant.thumbnailImage.contains('plant_1.png') || firstPlant.family.isEmpty) {
+         needsRefresh = true;
+       }
+       
+       // "aassets" yoki tarjima qilinmagan matnlarni tekshirish
+       final hasError = box.values.any((p) => 
+         p.thumbnailImage.contains('aassets') || 
+         p.propagationMethods.contains('Cutting') ||
+         p.propagationMethods.contains('Stem Cutting')
+       );
+       if (hasError) {
+         needsRefresh = true;
+       }
+    }
+
+    if (needsRefresh) {
       try {
-        // Eski ma'lumotlarni tozalaymiz (faqat bir marta yangilash uchun)
         await box.clear();
         
         final String response = await rootBundle.loadString('assets/baza/plants.json');
@@ -84,7 +111,7 @@ class DatabaseService {
           for (var p in plants) p.id: p
         };
         await box.putAll(plantMap);
-        debugPrint("Baza yangilandi: ${plants.length} ta o'simlik yuklandi");
+        debugPrint("Baza to'liq yangilandi: ${plants.length} ta o'simlik");
       } catch (e) {
         debugPrint("Sync Error: $e");
       }

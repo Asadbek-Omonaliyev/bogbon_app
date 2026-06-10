@@ -1,4 +1,4 @@
-import 'package:bogbon/Pages/Home_Page.dart';
+import 'package:bogbon/Pages/bogbon/Home_Page.dart';
 import 'package:bogbon/servis/DatabaseService.dart';
 import 'package:bogbon/servis/NotificationService.dart';
 import 'package:bogbon/servis/WeatherService.dart';
@@ -9,6 +9,7 @@ import 'package:bogbon/servis/provider/PlantProvider.dart';
 import 'package:bogbon/servis/provider/ThemeProvider.dart';
 import 'package:bogbon/servis/provider/UserProvider.dart';
 import 'package:bogbon/servis/provider/CareProvider.dart';
+import 'package:bogbon/servis/shared_preferences/Shared_preferens.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
@@ -25,9 +26,39 @@ void callbackDispatcher() {
     
     // 2. Haroratni tekshirish va bildirishnoma yuborish
     await WeatherService.checkTemperatureAndNotify();
+
+    // 3. Sug'orish vaqtini tekshirish va "Keyinroq" ro'yxatini yangilash
+    // Bu yerda CareProvider-ni bevosita ishlata olmaymiz (ChangeNotifier)
+    // Lekin SharedPreferens orqali sync qilishimiz mumkin
+    await _syncPostponedPlantsInBackground();
     
     return Future.value(true);
   });
+}
+
+Future<void> _syncPostponedPlantsInBackground() async {
+  final allPlants = DatabaseService.getAllPlants();
+  if (allPlants.isEmpty) return;
+
+  final now = DateTime.now();
+  final List<String> postponed = await SharedPreferens.getPostponedPlants();
+  List<String> newPostponedList = List.from(postponed);
+  bool changed = false;
+
+  for (var plant in allPlants) {
+    final nextWatering = plant.lastWateredAt.add(Duration(days: plant.care.watering.days));
+    if (now.isAfter(nextWatering)) {
+      final plantData = "${plant.id}|${plant.name}";
+      if (!newPostponedList.contains(plantData)) {
+        newPostponedList.add(plantData);
+        changed = true;
+      }
+    }
+  }
+
+  if (changed) {
+    await SharedPreferens.setPostponedPlants(newPostponedList);
+  }
 }
 
 void main() async {

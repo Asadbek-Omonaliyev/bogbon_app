@@ -1,5 +1,6 @@
 import 'dart:io';
-import 'package:bogbon/Pages/Add_Plant_Page.dart';
+import 'package:bogbon/Pages/bogbon/Add_Plant_Page.dart';
+import 'package:bogbon/Pages/bogbon/Watering_Stats_Page.dart';
 import 'package:bogbon/servis/DatabaseService.dart';
 import 'package:bogbon/servis/model/PlantModel.dart';
 import 'package:bogbon/servis/provider/FavoritesProvider.dart';
@@ -8,6 +9,7 @@ import 'package:bogbon/servis/provider/PlantProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:intl/intl.dart';
 
 class PlantDetailsPage extends StatefulWidget {
   final PlantModel plant;
@@ -26,6 +28,64 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
   void initState() {
     super.initState();
     _currentPlant = widget.plant;
+  }
+
+  Future<DateTime?> _showLastWateredDialog(BuildContext context) async {
+    DateTime? selectedDate = DateTime.now();
+
+    return showDialog<DateTime>(
+      context: context,
+      builder: (context) => StatefulBuilder(
+        builder: (context, setState) => AlertDialog(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: const Text("Sug'orish ma'lumoti", textAlign: TextAlign.center),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.water_drop, size: 50, color: Colors.blue),
+              const SizedBox(height: 15),
+              const Text(
+                  "Ushbu o'simlikni oxirgi marta qachon sug'organsiz?",
+                  textAlign: TextAlign.center),
+              const SizedBox(height: 20),
+              ListTile(
+                title: Text(
+                    "Sana: ${DateFormat('dd-MM-yyyy').format(selectedDate!)}"),
+                trailing: const Icon(Icons.calendar_month),
+                onTap: () async {
+                  final picked = await showDatePicker(
+                    context: context,
+                    initialDate: selectedDate!,
+                    firstDate: DateTime.now().subtract(const Duration(days: 30)),
+                    lastDate: DateTime.now(),
+                  );
+                  if (picked != null) {
+                    setState(() => selectedDate = picked);
+                  }
+                },
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text("Bekor qilish")),
+            ElevatedButton(
+              onPressed: () => Navigator.pop(context, selectedDate),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Text("Davom etish"),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   void _confirmDelete() {
@@ -61,7 +121,6 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
             ),
             onPressed: () async {
               final plantName = _currentPlant.name;
-              // Dialog va Details sahifasini yopish
               Navigator.pop(context); // Dialog
 
               await context.read<PlantProvider>().deletePlant(_currentPlant.id);
@@ -196,6 +255,14 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
                                   color: primaryColor,
                                 ),
                               ),
+                            if (_currentPlant.family.isNotEmpty)
+                              Text(
+                                "Oila: ${_currentPlant.family}",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 14,
+                                  color: isDark ? Colors.white54 : Colors.black54,
+                                ),
+                              ),
                           ],
                         ),
                       ),
@@ -215,33 +282,59 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
                   ),
                   const SizedBox(height: 20),
 
-                  Row(
+                  if (_currentPlant.origin.isNotEmpty) ...[
+                    Wrap(
+                      spacing: 8,
+                      children: _currentPlant.origin.map((o) => Chip(
+                        label: Text(o, style: const TextStyle(fontSize: 12)),
+                        backgroundColor: primaryColor.withOpacity(0.1),
+                        side: BorderSide.none,
+                      )).toList(),
+                    ),
+                    const SizedBox(height: 10),
+                  ],
+
+                  GridView.count(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 1.8,
                     children: [
                       _buildStatCard(
                         Icons.wb_sunny_outlined,
                         "Quyosh",
-                        "${_getSunlightText(_currentPlant.care.sunlight.type)}\n(${_currentPlant.care.sunlight.hours} soat)",
+                        "${_getSunlightText(_currentPlant.care.sunlight.type)} (${_currentPlant.care.sunlight.hours} s)",
                         isDark,
                       ),
-                      const SizedBox(width: 8),
-                      _buildStatCard(
-                        Icons.water_drop_outlined,
-                        "Suv",
-                        "${_currentPlant.care.watering.days} kunda\n(${_currentPlant.care.watering.amount})",
-                        isDark,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  WateringStatsPage(specificPlant: _currentPlant),
+                            ),
+                          );
+                        },
+                        child: _buildStatCard(
+                          Icons.water_drop_outlined,
+                          "Suv",
+                          "${_currentPlant.care.watering.days} kunda (${_currentPlant.care.watering.amountMl}ml)",
+                          isDark,
+                        ),
                       ),
-                      const SizedBox(width: 8),
                       _buildStatCard(
                         Icons.thermostat_outlined,
                         "Harorat",
-                        "${_currentPlant.care.temperature.min}-${_currentPlant.care.temperature.max}°C\n(Ideal: ${_currentPlant.care.temperature.ideal}°)",
+                        "${_currentPlant.care.temperature.ideal}°C (Min: ${_currentPlant.care.temperature.min}°)",
                         isDark,
                       ),
-                      const SizedBox(width: 8),
                       _buildStatCard(
-                        Icons.speed,
-                        "O'sish",
-                        _getGrowthRateText(_currentPlant.growthRate),
+                        Icons.height,
+                        "O'lchami",
+                        "${_currentPlant.matureSize.heightCm}x${_currentPlant.matureSize.widthCm} cm",
                         isDark,
                       ),
                     ],
@@ -259,29 +352,41 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
                   ),
                   const SizedBox(height: 30),
 
-                  _buildSectionTitle("Parvarish qilish", isDark),
+                  _buildSectionTitle("Parvarish qilish tafsilotlari", isDark),
                   _buildCareDetail(
-                    "Tuproq",
-                    _currentPlant.care.soilType,
+                    "Sug'orish usuli",
+                    "${_currentPlant.care.watering.method}\nMe'yor: ${_currentPlant.care.watering.amountMl} ml\nRisk: ${_currentPlant.care.watering.overwateringRisk}",
+                    Icons.water,
+                    isDark,
+                  ),
+                  _buildCareDetail(
+                    "Mavsumiy sug'orish",
+                    "Yozda: Har ${_currentPlant.care.watering.summerDays} kunda\nQishda: Har ${_currentPlant.care.watering.winterDays} kunda",
+                    Icons.calendar_month,
+                    isDark,
+                  ),
+                  _buildCareDetail(
+                    "Yorug'lik (Lux)",
+                    "Min: ${_currentPlant.care.sunlight.luxMin} lx\nMax: ${_currentPlant.care.sunlight.luxMax} lx",
+                    Icons.light_mode,
+                    isDark,
+                  ),
+                  _buildCareDetail(
+                    "Tuproq va Drenaj",
+                    "Turi: ${_currentPlant.care.soil.type}\npH: ${_currentPlant.care.soil.phMin} - ${_currentPlant.care.soil.phMax}\nDrenaj: ${_currentPlant.care.soil.drainage}",
                     Icons.landscape,
                     isDark,
                   ),
                   _buildCareDetail(
-                    "O'g'it",
-                    "${_currentPlant.care.fertilizer.type} (${_currentPlant.care.fertilizer.frequency})${_currentPlant.care.fertilizer.usage.isNotEmpty ? '\nQo\'llash: ${_currentPlant.care.fertilizer.usage}' : ''}",
+                    "O'g'it (NPK)",
+                    "Turi: ${_currentPlant.care.fertilizer.type}\nNPK: ${_currentPlant.care.fertilizer.npk}\nHar ${_currentPlant.care.fertilizer.frequencyDays} kunda",
                     Icons.auto_awesome,
                     isDark,
                   ),
                   _buildCareDetail(
                     "Namlik",
-                    "${_currentPlant.care.humidity.percent}%",
+                    "Ideal: ${_currentPlant.care.humidity.ideal}% (Oraliq: ${_currentPlant.care.humidity.min}-${_currentPlant.care.humidity.max}%)",
                     Icons.cloud_queue,
-                    isDark,
-                  ),
-                  _buildCareDetail(
-                    "Qayta ekish",
-                    "Har ${_currentPlant.care.repotting.everyMonths} oyda (${_currentPlant.care.repotting.season})",
-                    Icons.refresh,
                     isDark,
                   ),
                   _buildCareDetail(
@@ -290,21 +395,70 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
                     Icons.location_on_outlined,
                     isDark,
                   ),
-                  if (_currentPlant.bloomingSeason.isNotEmpty)
+                  if (_currentPlant.lifespan.isNotEmpty)
                     _buildCareDetail(
-                      "Gullash mavsumi",
-                      _currentPlant.bloomingSeason,
-                      Icons.wb_twilight,
-                      isDark,
-                    ),
-                  if (_currentPlant.flowerColor.isNotEmpty)
-                    _buildCareDetail(
-                      "Gul rangi",
-                      _currentPlant.flowerColor,
-                      Icons.palette_outlined,
+                      "Umr ko'rish davomiyligi",
+                      _currentPlant.lifespan,
+                      Icons.hourglass_empty,
                       isDark,
                     ),
                   const SizedBox(height: 30),
+
+                  if (_currentPlant.flowering.season.isNotEmpty) ...[
+                    _buildSectionTitle("Gullash", isDark),
+                    _buildCareDetail(
+                      "Mavsum",
+                      _currentPlant.flowering.season,
+                      Icons.wb_twilight,
+                      isDark,
+                    ),
+                    _buildCareDetail(
+                      "Gul rangi",
+                      _currentPlant.flowering.flowerColor,
+                      Icons.palette_outlined,
+                      isDark,
+                    ),
+                    _buildCareDetail(
+                      "Gullash yoshi",
+                      "${_currentPlant.flowering.floweringAgeYears} yoshdan",
+                      Icons.cake,
+                      isDark,
+                    ),
+                    const SizedBox(height: 30),
+                  ],
+
+                  _buildSectionTitle("Mavsumiy parvarish", isDark),
+                  _buildSeasonalExpansion("Bahor", _currentPlant.seasonalCare.spring, Icons.local_florist, Colors.green),
+                  _buildSeasonalExpansion("Yoz", _currentPlant.seasonalCare.summer, Icons.sunny, Colors.orange),
+                  _buildSeasonalExpansion("Kuz", _currentPlant.seasonalCare.autumn, Icons. whatshot, Colors.brown),
+                  _buildSeasonalExpansion("Qish", _currentPlant.seasonalCare.winter, Icons.ac_unit, Colors.blue),
+                  const SizedBox(height: 30),
+
+                  if (_currentPlant.commonProblems.isNotEmpty) ...[
+                    _buildSectionTitle("Umumiy muammolar", isDark),
+                    ..._currentPlant.commonProblems.map((p) => Card(
+                      margin: const EdgeInsets.only(bottom: 12),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                      child: ExpansionTile(
+                        leading: const Icon(Icons.report_problem, color: Colors.amber),
+                        title: Text(p.problem, style: const TextStyle(fontWeight: FontWeight.bold)),
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Sabab: ${p.cause}", style: const TextStyle(fontWeight: FontWeight.w500)),
+                                const SizedBox(height: 8),
+                                Text("Yechim: ${p.solution}"),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    )),
+                    const SizedBox(height: 30),
+                  ],
 
                   if (_currentPlant.isToxicForPets ||
                       _currentPlant.isToxicForChildren) ...[
@@ -343,6 +497,15 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
                         Colors.amber,
                         isDark,
                       ),
+                    ),
+                    const SizedBox(height: 30),
+                  ],
+
+                  if (_currentPlant.companionPlants.isNotEmpty) ...[
+                    _buildSectionTitle("Birga ekish tavsiya etiladi", isDark),
+                    Wrap(
+                      spacing: 8,
+                      children: _currentPlant.companionPlants.map((cp) => _buildFeatureChip(cp, Icons.group_work, isDark, color: Colors.purple)).toList(),
                     ),
                     const SizedBox(height: 30),
                   ],
@@ -398,8 +561,8 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
                     _buildSectionTitle("Zararkunandalar", isDark),
                     ..._currentPlant.pests.map(
                       (p) => _buildCareDetail(
-                        p.name,
-                        "Kimyoviy: ${p.treatment.chemical}\nOrganik: ${p.treatment.organic}",
+                        "${p.name} (${p.severity})",
+                        "Alomatlar: ${p.symptoms.join(', ')}\nKimyoviy: ${p.treatment.chemical.join(', ')}\nOrganik: ${p.treatment.organic.join(', ')}",
                         Icons.bug_report_outlined,
                         isDark,
                       ),
@@ -408,17 +571,37 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
                   ],
 
                   if (_currentPlant.diseases.isNotEmpty) ...[
-                    _buildSectionTitle("Mumkin bo'lgan kasalliklar", isDark),
+                    _buildSectionTitle("Kasalliklar", isDark),
                     ..._currentPlant.diseases.map(
                       (d) => _buildCareDetail(
-                        d.name,
-                        "Sababi: ${d.cause}\nAlomatlar: ${d.symptoms.join(', ')}\nKimyoviy: ${d.treatment.chemical}\nOrganik: ${d.treatment.organic}",
+                        "${d.name} (${d.severity})",
+                        "Sababi: ${d.cause}\nAlomatlar: ${d.symptoms.join(', ')}\nProfilaktika: ${d.prevention.join(', ')}\nKimyoviy: ${d.treatment.chemical.join(', ')}\nOrganik: ${d.treatment.organic.join(', ')}",
                         Icons.coronavirus_outlined,
                         isDark,
                       ),
                     ),
                     const SizedBox(height: 30),
                   ],
+
+                  _buildSectionTitle("Aqlli Insight (AI)", isDark),
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: primaryColor.withOpacity(0.05),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: primaryColor.withOpacity(0.2)),
+                    ),
+                    child: Column(
+                      children: [
+                        _buildAiRow("Turi", _currentPlant.aiContext.plantType, Icons.category),
+                        _buildAiRow("Suvga sezgirlik", _currentPlant.aiContext.wateringSensitivity, Icons.opacity),
+                        _buildAiRow("Qurg'oqchilikka chidamlilik", _currentPlant.aiContext.droughtTolerance, Icons.wb_sunny),
+                        _buildAiRow("Kasallik xavfi", _currentPlant.aiContext.diseaseRisk, Icons.warning),
+                        _buildAiRow("Hayvonlar uchun xavfsiz", _currentPlant.aiContext.petFriendly ? "Ha" : "Yo'q", Icons.pets),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 30),
 
                   Container(
                     padding: const EdgeInsets.all(15),
@@ -438,14 +621,14 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Eslatma",
+                                "Eslatmalar",
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,
                                 ),
                               ),
                               Text(
-                                "Har ${_currentPlant.reminders.wateringDays} kunda sug'orish haqida eslatish",
+                                "Sug'orish: ${_currentPlant.smartNotifications.wateringDays} kun | O'g'it: ${_currentPlant.smartNotifications.fertilizerDays} kun",
                                 style: GoogleFonts.poppins(
                                   fontSize: 12,
                                   color: isDark
@@ -463,8 +646,23 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
                                 _currentPlant.id,
                               ),
                               activeColor: Colors.green,
-                              onChanged: (value) => notifProvider
-                                  .toggleNotification(_currentPlant, value),
+                              onChanged: (value) async {
+                                if (value) {
+                                  // Eslatmani yoqishdan oldin oxirgi sug'orilgan vaqtni so'raymiz
+                                  final selectedDate = await _showLastWateredDialog(context);
+                                  if (selectedDate != null && mounted) {
+                                    // O'simlikning oxirgi sug'orilgan vaqtini yangilaymiz
+                                    final updatedPlant = _currentPlant.copyWith(lastWateredAt: selectedDate);
+                                    await context.read<PlantProvider>().addPlant(updatedPlant);
+                                    setState(() {
+                                      _currentPlant = updatedPlant;
+                                    });
+                                    await notifProvider.toggleNotification(updatedPlant, true, lastWateredAt: selectedDate);
+                                  }
+                                } else {
+                                  await notifProvider.toggleNotification(_currentPlant, false);
+                                }
+                              },
                             );
                           },
                         ),
@@ -477,6 +675,37 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildAiRow(String label, String value, IconData icon) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4),
+      child: Row(
+        children: [
+          Icon(icon, size: 16, color: Colors.green),
+          const SizedBox(width: 8),
+          Text("$label: ", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+          Expanded(child: Text(value, style: const TextStyle(fontSize: 13))),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSeasonalExpansion(String title, List<String> tasks, IconData icon, Color color) {
+    if (tasks.isEmpty) return const SizedBox.shrink();
+    return Card(
+      margin: const EdgeInsets.only(bottom: 8),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ExpansionTile(
+        leading: Icon(icon, color: color),
+        title: Text(title, style: GoogleFonts.poppins(fontWeight: FontWeight.w600)),
+        children: tasks.map((t) => ListTile(
+          dense: true,
+          leading: const Icon(Icons.check, size: 16, color: Colors.green),
+          title: Text(t, style: const TextStyle(fontSize: 13)),
+        )).toList(),
       ),
     );
   }
@@ -515,50 +744,46 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
     String value,
     bool isDark,
   ) {
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4),
-        decoration: BoxDecoration(
-          color: isDark
-              ? Colors.white.withOpacity(0.05)
-              : Colors.black.withOpacity(0.03),
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, color: Colors.green, size: 20),
-            const SizedBox(height: 6),
-            Text(
-              label,
-              style: GoogleFonts.poppins(
-                fontSize: 9,
-                color: isDark ? Colors.white38 : Colors.black38,
-              ),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: isDark
+            ? Colors.white.withOpacity(0.05)
+            : Colors.black.withOpacity(0.03),
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icon, color: Colors.green, size: 22),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            style: GoogleFonts.poppins(
+              fontSize: 10,
+              color: isDark ? Colors.white38 : Colors.black38,
             ),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                value,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.poppins(
-                  fontSize: 11,
-                  fontWeight: FontWeight.bold,
-                  color: isDark ? Colors.white : Colors.black87,
-                ),
-              ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            value,
+            textAlign: TextAlign.center,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: GoogleFonts.poppins(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              color: isDark ? Colors.white : Colors.black87,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildSectionTitle(String title, bool isDark) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 15),
+      padding: const EdgeInsets.only(bottom: 15, top: 10),
       child: Text(
         title,
         style: GoogleFonts.poppins(
@@ -714,19 +939,8 @@ class _PlantDetailsPageState extends State<PlantDetailsPage> {
         return "Qisman soya";
       case SunlightType.lowLight:
         return "Kam yorug'lik";
-      default:
-        return "Noma'lum";
-    }
-  }
-
-  String _getGrowthRateText(GrowthRate rate) {
-    switch (rate) {
-      case GrowthRate.slow:
-        return "Sekin";
-      case GrowthRate.medium:
-        return "O'rtacha";
-      case GrowthRate.fast:
-        return "Tez";
+      case SunlightType.bright_indirect:
+        return "Yorug' (bilvosita)";
       default:
         return "Noma'lum";
     }

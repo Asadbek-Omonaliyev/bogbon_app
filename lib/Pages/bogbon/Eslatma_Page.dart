@@ -1,5 +1,5 @@
 import 'package:bogbon/Components/Home_Component.dart';
-import 'package:bogbon/Pages/Plant_Details_Page.dart';
+import 'package:bogbon/Pages/bogbon/Plant_Details_Page.dart';
 import 'package:bogbon/servis/model/PlantModel.dart';
 import 'package:bogbon/servis/provider/NotificationProvider.dart';
 import 'package:flutter/material.dart';

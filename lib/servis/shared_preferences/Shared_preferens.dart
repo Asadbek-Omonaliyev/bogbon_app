@@ -108,4 +108,16 @@ class SharedPreferens {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getString("profile_image");
   }
+
+  /// Umumiy bildirishnoma sozlamasini saqlash
+  static Future<void> setGlobalNotifications(bool status) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool("global_notifications", status);
+  }
+
+  /// Umumiy bildirishnoma sozlamasini o'qish
+  static Future<bool> getGlobalNotifications() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool("global_notifications") ?? true;
+  }
 }
